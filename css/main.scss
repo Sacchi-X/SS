@@ -1,0 +1,144 @@
+@import "reset";
+
+//variables
+
+$fs-s:1.5rem;
+$fs-m:2rem;
+$fs-l:6rem;
+$fs-xl:8rem;
+
+
+$ff-primary:'Open Sans';
+$ff-secondary:'Noto Serif';
+
+$fc-primary:white;
+
+//custom styles
+
+
+.center{
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+
+.center-middle{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// body
+
+body{
+
+  background: url(../img/robert-katzki-119134-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// HEADER SECTION
+
+header{
+   color: $fc-primary;
+   position: relative;
+   width: 100vw;
+   height: 100vh;
+
+//navigation
+nav{
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  // background: #ddd;
+  padding: 25px;
+  font-size: $fs-s;
+  font-family: $ff-secondary;
+  font-weight: 700;
+  font-style: italic;
+
+//social media
+  .social{
+
+    @extend .center-middle;
+    left:5%;
+    bottom: 0;
+
+    h2{
+      font-weight: 800;
+      font-size: $fs-s;
+
+    }
+
+    h2::before{
+      content: '#';
+      font-weight: bold;
+    }
+
+    a{
+      display: inline-block;
+      margin: 0;
+
+    }
+  }
+
+
+
+
+//innernavigation
+  ul{
+    @extend .center-middle;
+    right:5%;
+    bottom: 0;
+    // margin-left: auto;
+    // text-align: right;
+    // float: right;
+
+
+  }
+
+  li{
+
+    display: inline-block;
+    list-style: none;
+  }
+
+  a{
+    color: $fc-primary;
+    display: block;
+    text-decoration: none;
+    margin:.75em 1.75em;
+  }
+}
+
+//banner
+
+.banner{
+  @extend .center;
+
+  h1{
+    font-size: $fs-xl;
+	  font-weight: 800;
+	  letter-spacing: -2px;
+    line-height: 140px;
+    text-transform: uppercase;
+    font-family: $ff-primary;
+    letter-spacing: 5px;
+  }
+
+  p{
+    font-size: $fs-s;
+    font-family: 'Noto Serif';
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    font-style: italic;
+    // font-weight: 200;
+  }
+}
+
+
+}
