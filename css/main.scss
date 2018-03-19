@@ -76,6 +76,16 @@ nav{
   font-weight: 700;
   font-style: italic;
 
+  //all anchors in nav
+
+  a{
+    color: $fc-primary;
+  }
+
+  a:hover{
+  color: $fc-sec;
+  }
+
 //social media
   .social{
 
@@ -99,6 +109,8 @@ nav{
       margin: 0;
 
     }
+
+
   }
 
 
@@ -113,21 +125,44 @@ nav{
     // text-align: right;
     // float: right;
 
+    li{
 
-  }
+      display: inline-block;
+      list-style: none;
+    }
 
-  li{
+    a{
+      position: relative;
+      display: block;
+      text-decoration: none;
+      margin:.75em 1.75em;
+    }
 
-    display: inline-block;
-    list-style: none;
-  }
+    a:hover{
+      opacity: .9;
 
-  a{
-    color: $fc-primary;
-    display: block;
-    text-decoration: none;
-    margin:.75em 1.75em;
+    }
 
+    a::after{
+      content: '';
+      position: absolute;
+      display: block;
+      margin: auto;
+      left:0;
+      right:0;
+      bottom: -.25em;
+      width: 0%;
+      height:1px;
+      background: $fc-sec;
+      color: transparent;
+      transition: all;
+      transition-duration: 500ms;
+
+    }
+
+    a:hover::after{
+      width: 100%;
+    }
   }
 
   // a:hover{
